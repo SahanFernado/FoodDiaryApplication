@@ -1,0 +1,29 @@
+C:\Project\FoodDiaryApplication\Entities\bin\Debug\net8.0\Entities.deps.json
+C:\Project\FoodDiaryApplication\Entities\bin\Debug\net8.0\Entities.runtimeconfig.json
+C:\Project\FoodDiaryApplication\Entities\bin\Debug\net8.0\Entities.dll
+C:\Project\FoodDiaryApplication\Entities\bin\Debug\net8.0\Entities.pdb
+C:\Project\FoodDiaryApplication\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
+C:\Project\FoodDiaryApplication\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\FoodDiaryApplication\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+C:\Project\FoodDiaryApplication\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+C:\Project\FoodDiaryApplication\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+C:\Project\FoodDiaryApplication\Entities\obj\Debug\net8.0\Entities.dll
+C:\Project\FoodDiaryApplication\Entities\obj\Debug\net8.0\refint\Entities.dll
+C:\Project\FoodDiaryApplication\Entities\obj\Debug\net8.0\Entities.pdb
+C:\Project\FoodDiaryApplication\Entities\obj\Debug\net8.0\Entities.genruntimeconfig.cache
+C:\Project\FoodDiaryApplication\Entities\obj\Debug\net8.0\ref\Entities.dll
+C:\Project\FoodDiaryApplication - Copy\Entities\bin\Debug\net8.0\Entities.deps.json
+C:\Project\FoodDiaryApplication - Copy\Entities\bin\Debug\net8.0\Entities.runtimeconfig.json
+C:\Project\FoodDiaryApplication - Copy\Entities\bin\Debug\net8.0\Entities.dll
+C:\Project\FoodDiaryApplication - Copy\Entities\bin\Debug\net8.0\Entities.pdb
+C:\Project\FoodDiaryApplication - Copy\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
+C:\Project\FoodDiaryApplication - Copy\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\FoodDiaryApplication - Copy\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+C:\Project\FoodDiaryApplication - Copy\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+C:\Project\FoodDiaryApplication - Copy\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+C:\Project\FoodDiaryApplication - Copy\Entities\obj\Debug\net8.0\Entities.dll
+C:\Project\FoodDiaryApplication - Copy\Entities\obj\Debug\net8.0\refint\Entities.dll
+C:\Project\FoodDiaryApplication - Copy\Entities\obj\Debug\net8.0\Entities.pdb
+C:\Project\FoodDiaryApplication - Copy\Entities\obj\Debug\net8.0\Entities.genruntimeconfig.cache
+C:\Project\FoodDiaryApplication - Copy\Entities\obj\Debug\net8.0\ref\Entities.dll
+C:\Project\FoodDiaryApplication\Entities\obj\Debug\net8.0\Entities.sourcelink.json

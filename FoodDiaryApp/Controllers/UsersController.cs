@@ -1,4 +1,5 @@
 ﻿using Entities;
+using FoodDiaryApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FoodDiaryApp.Controllers
@@ -19,11 +20,19 @@ namespace FoodDiaryApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(User user)
+        public async Task<IActionResult> Register([FromBody] UserViewModel user)
         {
             if (ModelState.IsValid)
             {
-                _context.Users.Add(user);
+                var hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
+
+                var newUser = new User
+                {
+                    Username = user.UserName,
+                    Password = hashedPassword
+                };
+
+                _context.Users.Add(newUser);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Login");
             }
@@ -37,19 +46,18 @@ namespace FoodDiaryApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(User user)
+        public IActionResult Login([FromBody] UserViewModel user)
         {
             var loginUser = _context.Users
-                .FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password);
+                .FirstOrDefault(u => u.Username == user.UserName);
 
-            if (loginUser != null)
+            if (loginUser != null && BCrypt.Net.BCrypt.Verify(user.Password, loginUser.Password))
             {
-                // You might want to add authentication logic here
-                return RedirectToAction("Index", "Home");
+                return Json(new { Success = true });
             }
 
-            ModelState.AddModelError("", "Invalid login attempt");
-            return View(user);
+            
+            return Json(new { Success = false });
         }
     }
 }

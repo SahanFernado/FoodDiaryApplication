@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Entities/obj/Debug/net8.0/Entities.AssemblyInfo.cs
+/Entities/obj/Debug/net8.0/Entities.AssemblyInfoInputs.cache
+/Entities/bin/Debug/net8.0/Entities.dll
+/Entities/bin/Debug/net8.0/Entities.pdb
+/Entities/obj/Debug/net8.0/ref/Entities.dll
+/Entities/obj/Debug/net8.0/refint/Entities.dll
+/Entities/obj/Debug/net8.0/Entities.dll
+/Entities/obj/Debug/net8.0/Entities.sourcelink.json
+/Entities/obj/Debug/net8.0/Entities.pdb

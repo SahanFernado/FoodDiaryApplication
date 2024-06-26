@@ -53,11 +53,19 @@ namespace FoodDiaryApp.Controllers
 
             if (loginUser != null && BCrypt.Net.BCrypt.Verify(user.Password, loginUser.Password))
             {
+                HttpContext.Session.SetInt32("UserId", loginUser.Id);
                 return Json(new { Success = true });
             }
 
             
             return Json(new { Success = false });
+        }
+
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear(); 
+            return RedirectToAction("Login");
         }
     }
 }

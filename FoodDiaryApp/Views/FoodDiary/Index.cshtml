@@ -1,0 +1,26 @@
+﻿@model IEnumerable<FoodDiaryApp.Models.FoodDiaryEntryViewModel>
+
+<div class="container">
+    <h2>Food Diary Entries</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Meal Type</th>
+                <th>Description</th>
+                <th>Symptoms</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var entry in Model)
+            {
+                <tr>
+                    <td>@entry.Date.ToString("yyyy-MM-dd")</td>
+                    <td>@entry.MealType</td>
+                    <td>@entry.Description</td>
+                    <td>@entry.Symptoms</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

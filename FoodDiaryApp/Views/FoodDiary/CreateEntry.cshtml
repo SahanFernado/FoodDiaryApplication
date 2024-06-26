@@ -1,0 +1,24 @@
+﻿@model FoodDiaryApp.Models.FoodDiaryEntryViewModel
+
+<div ng-controller="FoodDiaryController">
+    <h2>Create Diary Entry</h2>
+    <form ng-submit="createEntry()">
+        <div class="form-group">
+            <label>Date</label>
+            <input type="date" class="form-control" ng-model="entry.Date" required />
+        </div>
+        <div class="form-group">
+            <label>Meal Type</label>
+            <input type="text" class="form-control" ng-model="entry.MealType" required />
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <textarea class="form-control" ng-model="entry.Description" required></textarea>
+        </div>
+        <div class="form-group">
+            <label>Symptoms</label>
+            <textarea class="form-control" ng-model="entry.Symptoms"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Entry</button>
+    </form>
+</div>

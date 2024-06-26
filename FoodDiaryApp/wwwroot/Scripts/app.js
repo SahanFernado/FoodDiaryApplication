@@ -26,14 +26,30 @@ app.controller('UsersController', function ($scope, $http) {
             data: $scope.user,
             headers: { 'Content-Type': 'application/json' }
         }).then(function (response) {
-            console.log(response);
+            
             if (response.data.success) {
-                window.location.href = '/Home/Index';
+                window.location.href = '/FoodDiary/CreateEntry';
             } else {
                 alert('Login failed');
             }
         }, function (error) {
             alert('Login failed');
+        });
+    };
+});
+
+app.controller('FoodDiaryController', function ($scope, $http) {
+    $scope.createEntry = function () {
+        $http.post('/FoodDiary/CreateEntry', $scope.entry).then(function (response) {
+            if (response.data.success) {
+                alert('Entry created successfully');
+                window.location.href = '/FoodDiary/Index';
+            } else {
+                alert('Failed to create entry');
+            }
+
+        }, function (error) {
+            alert('Failed to create entry');
         });
     };
 });

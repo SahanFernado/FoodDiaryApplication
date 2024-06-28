@@ -30,3 +30,4 @@
 /.vs/Food Diary Application/v17
 /Entities/obj/Debug/net8.0/Entities.csproj.CoreCompileInputs.cache
 /FoodDiaryApp/ApiDocs/food-diary-427611-d71dbf0ba0b4.json
+/FoodDiaryApp/appsettings.secret.json

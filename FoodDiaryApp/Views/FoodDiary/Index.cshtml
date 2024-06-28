@@ -29,77 +29,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card View Page</title>
+    <title>FoodDiaryApp</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+            
+            background-image: url('c:\users\alex\source\repos\fooddiaryapplication\fooddiaryapp\images\diary-surrounded-by-healthy-foods.jpg') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
+            padding: 0;
         }
+
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
         .card-container {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
             gap: 20px;
         }
+
         .card {
-            background: white;
-            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ddd;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             width: 200px;
+            padding: 20px;
+            transition: transform 0.2s;
         }
-        .card .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
+
+            .card:hover {
+                transform: scale(1.05);
+            }
+
+        .card-header {
             margin-bottom: 10px;
         }
-        .card .header .icon {
-            width: 20px;
-            height: 20px;
-            background-color: #ccc;
-            display: inline-block;
+
+            .card-header h2 {
+                margin: 0;
+                font-size: 18px;
+            }
+
+        .card-body p {
+            margin: 5px 0;
         }
-        .card .header .title {
-            font-size: 16px;
-            font-weight: bold;
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
-        .card .content {
-            font-size: 14px;
-            line-height: 1.6;
-        }
+
+            footer a {
+                text-decoration: none;
+                color: #333;
+            }
+
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="#">FoodDiaryApp</a>
+            <a href="#">Logout</a>
+            <a href="#">Records</a>
+            <a href="#">Add Record</a>
+        </nav>
+    </header>
     <div class="card-container">
         <div class="card">
-            <div class="header">
-                <div class="title">Card 1</div>
-                <div class="icon">✓</div>
+            <div class="card-header">
+                <h2>Lunch - 2024-06-24</h2>
             </div>
-            <div class="content">
-                <p>Item 1</p>
-                <p>Item 2</p>
-                <p>Item 3</p>
+            <div class="card-body">
+                <p><strong>Description</strong> Rice</p>
+                <p><strong>Symptoms</strong></p>
+                <p><strong>Analysis</strong></p>
             </div>
         </div>
         <div class="card">
-            <div class="header">
-                <div class="title">Card 2</div>
-                <div class="icon">🖉</div>
+            <div class="card-header">
+                <h2>Breakfast - 2024-06-25</h2>
             </div>
-            <div class="content">
-                <p>Item 1</p>
-                <p>Item 2</p>
-                <p>Item 3</p>
+            <div class="card-body">
+                <p><strong>Description</strong> Bread</p>
+                <p><strong>Symptoms</strong> none</p>
+                <p><strong>Analysis</strong></p>
             </div>
         </div>
+        <!-- More cards as needed -->
     </div>
+    <footer>
+        <p>© 2024 - FoodDiaryApp · <a href="#">Privacy</a></p>
+    </footer>
 </body>
 </html>

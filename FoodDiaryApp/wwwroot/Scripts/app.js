@@ -2,6 +2,7 @@
 
 app.controller('UsersController', function ($scope, $http) {
     $scope.user = {};
+    $scope.selectedRecord = {};
 
     $scope.register = function () {
         $http({
@@ -51,5 +52,21 @@ app.controller('FoodDiaryController', function ($scope, $http) {
         }, function (error) {
             alert('Failed to create entry');
         });
+    };
+
+
+    $scope.editFoodDiary = function (record) {
+
+        $http.get('/FoodDiary/GetSelectedEntry', { params: { id: record } }).then(function (response) {
+
+            $scope.selectedRecord = response.data;
+            $scope.selectedRecord.date = new Date($scope.selectedRecord.date); 
+
+            document.getElementById('editModal').style.display = "block";
+        });
+    };
+
+    $scope.closeModal = function () {
+        document.getElementById('editModal').style.display = "none";
     };
 });

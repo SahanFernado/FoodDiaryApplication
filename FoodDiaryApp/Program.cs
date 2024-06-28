@@ -1,4 +1,6 @@
 using Entities;
+using FoodDiaryApp.Services;
+using Google.Api;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +20,22 @@ builder.Services.AddSession(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Register the OpenAI service
+var apiKey = builder.Configuration["OpenAI:ApiKey"];
+builder.Services.AddSingleton(new CalorieEstimatorService(apiKey));
+
+string credentialPath = "C:\\Project\\Food Diary Application\\FoodDiaryApp\\ApiDocs\\food-diary-427611-d71dbf0ba0b4.json";
+string nutritionApiKey = "aff171108f0c00dc99027a7011049451";
+string nutritionAppId = "1eaa9d86";
+builder.Services.AddSingleton(new GoogleCloudAiService(credentialPath, nutritionApiKey, nutritionAppId));
+
+string textAnalyticsEndpoint = builder.Configuration["AzureService:TextAnalyticsEndpoint"];
+string textAnalyticsApiKey = builder.Configuration["AzureService:TextAnalyticsApiKey"];
+string nutritionixApiKey = builder.Configuration["Nutritionix:ApiKey"];
+string nutritionixAppId = builder.Configuration["Nutritionix:AppId"];
+
+builder.Services.AddSingleton(new AiNutritionService(nutritionixApiKey, nutritionixAppId, textAnalyticsEndpoint, textAnalyticsApiKey));
 
 var app = builder.Build();
 

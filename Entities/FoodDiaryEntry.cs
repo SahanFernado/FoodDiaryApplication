@@ -26,5 +26,7 @@ namespace Entities
 
         public string Symptoms { get; set; }
 
+        public string Analysis { get; set; }
+
     }
 }

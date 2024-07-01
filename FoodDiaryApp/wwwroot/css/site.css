@@ -19,16 +19,16 @@ html {
 
 body {
     margin-bottom: 60px;
-    background-image: url('../Images/meal-prep-and-planning-101-1440x810.jpg');
+    background-image: url('../Images/Attachment.jpeg');
     background-size: cover; /* Ensures the image covers the entire page */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the image on the page */
     background-attachment: fixed;
-    color: white;
+   
 }
 
 .footerArea {
-    color: white;
+    color: black;
 }
 
 .entryListView {

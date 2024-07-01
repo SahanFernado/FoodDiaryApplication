@@ -1,22 +1,22 @@
 ﻿@model FoodDiaryApp.Models.FoodDiaryEntryViewModel
 
 <div ng-controller="FoodDiaryController">
-    <h2>Create Diary Entry</h2>
+    <h2 class="text-background">Create Diary Entry</h2>
     <form ng-submit="createEntry()">
         <div class="form-group">
-            <label>Date</label>
+            <label class="text-background">Date</label>
             <input type="date" class="form-control" ng-model="entry.Date" required />
         </div>
         <div class="form-group">
-            <label>Meal Type</label>
+            <label class="text-background">Meal Type</label>
             <input type="text" class="form-control" ng-model="entry.MealType" required />
         </div>
         <div class="form-group">
-            <label>Description</label>
+            <label class="text-background">Description</label>
             <textarea class="form-control" ng-model="entry.Description" required></textarea>
         </div>
         <div class="form-group">
-            <label>Symptoms</label>
+            <label class="text-background">Symptoms</label>
             <textarea class="form-control" ng-model="entry.Symptoms"></textarea>
         </div>
         <br />

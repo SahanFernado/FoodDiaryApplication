@@ -1,14 +1,14 @@
 ﻿@model FoodDiaryApp.Models.UserViewModel
 
 <div class="container" ng-controller="UsersController">
-    <h2>Login</h2>
+    <h2 class="text-background">Login</h2>
     <form ng-submit="login()">
         <div class="form-group">
-            <label for="username">Username</label>
+            <label for="username" class="text-background">Username</label>
             <input type="text" id="username" class="form-control" ng-model="user.Username" required />
         </div>
         <div class="form-group">
-            <label for="password">Password</label>
+            <label for="password" class="text-background">Password</label>
             <input type="password" id="password" class="form-control" ng-model="user.Password" required />
         </div>
         <br />
